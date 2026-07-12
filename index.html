@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Why You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'JetBrains Mono', monospace;
+}
+
+body{
+background:#050505;
+color:#EAEAEA;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+#terminal{
+width:90%;
+max-width:900px;
+background:#111;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 0 40px rgba(0,0,0,.5);
+}
+
+#topbar{
+height:42px;
+background:#1c1c1c;
+display:flex;
+align-items:center;
+padding:0 18px;
+}
+
+.dot{
+width:12px;
+height:12px;
+border-radius:50%;
+margin-right:8px;
+}
+
+.red{background:#ff5f57;}
+.yellow{background:#febc2e;}
+.green{background:#28c840;}
+
+#content{
+padding:35px;
+font-size:18px;
+line-height:1.8;
+white-space:pre-wrap;
+}
+
+.cursor{
+display:inline-block;
+width:10px;
+background:white;
+animation:blink .8s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+.reason{
+display:none;
+margin-top:35px;
+padding:22px;
+border-left:3px solid #6ea8fe;
+background:#181818;
+border-radius:8px;
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+button{
+margin-top:25px;
+background:#6ea8fe;
+color:white;
+border:none;
+padding:14px 26px;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+h2{
+margin-bottom:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="terminal">
+
+<div id="topbar">
+<div class="dot red"></div>
+<div class="dot yellow"></div>
+<div class="dot green"></div>
+</div>
+
+<div id="content">
+
+<div id="intro"></div>
+
+<div id="cards"></div>
+
+</div>
+
+</div>
